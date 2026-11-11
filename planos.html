@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planos PulseFit Studio - Compara as opções de mensalidade, livre-trânsito e estudante sem fidelização.">
+    <title>PulseFit Studio | Planos</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            fundo: '#0b1120',
+                            fundoAlt: '#080d19',
+                            superficie: '#162238',
+                            superficieAlt: '#131d31',
+                            destaque: '#00a8e8',
+                            destaqueHover: '#0094ce'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Folha de estilos própria do projeto -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-[#0b1120] text-slate-100 min-h-screen flex flex-col font-sans antialiased">
+
+    <!-- ===== CABEÇALHO E NAVEGAÇÃO ===== -->
+    <header class="bg-[#0b1120] border-b border-slate-800/80 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            
+            <!-- Logótipo da Marca -->
+            <a href="index.html" class="flex items-center gap-3 group" aria-label="PulseFit Studio - Página Inicial">
+                <div class="bg-white rounded-xl px-3 py-1.5 shadow-md flex items-center justify-center transition-transform group-hover:scale-105">
+                    <img src="imagens/logo.png" alt="Logótipo PulseFit Studio" class="h-8 sm:h-9 object-contain">
+                </div>
+            </a>
+
+            <!-- Botão do Menu Responsivo (Mobile) -->
+            <button 
+                id="menu-botao" 
+                type="button"
+                aria-expanded="false" 
+                aria-controls="menu-principal"
+                class="md:hidden rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm font-medium text-slate-200 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00a8e8] transition-colors"
+            >
+                <span id="menu-icone" aria-hidden="true" class="mr-1">☰</span> Menu
+            </button>
+
+            <!-- Navegação Principal -->
+            <nav id="menu-principal" aria-label="Navegação principal" class="hidden md:block w-full md:w-auto mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row md:items-center gap-6 text-sm font-medium border-t border-slate-800 pt-4 md:border-0 md:pt-0">
+                    <li>
+                        <a href="index.html" class="text-slate-300 hover:text-[#00a8e8] transition-colors block py-1">Início</a>
+                    </li>
+                    <li>
+                        <a href="modalidades.html" class="text-slate-300 hover:text-[#00a8e8] transition-colors block py-1">Modalidades</a>
+                    </li>
+                    <li>
+                        <a href="planos.html" class="nav-link-ativo block py-1">Planos</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="flex-1 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-20 w-full">
+
+        <!-- ===== TÍTULO DA PÁGINA ===== -->
+        <section class="mb-10">
+            <h1 class="text-4xl sm:text-5xl font-black italic tracking-wide text-white uppercase mb-2">
+                Planos
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg">
+                Sem fidelização. Escolhe o que se adapta a ti.
+            </p>
+        </section>
+
+        <!-- ===== TABELA COMPARATIVA DE PLANOS ===== -->
+        <div class="rounded-2xl border border-slate-800 bg-[#101828]/60 overflow-hidden shadow-2xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[620px]">
+                    <thead>
+                        <tr class="border-b border-slate-800 bg-[#162238]/80 text-white">
+                            <th scope="col" class="py-5 px-6 w-1/4 text-sm font-semibold text-slate-300">
+                                Características
+                            </th>
+                            <th scope="col" class="py-5 px-6 w-1/4 text-center text-lg font-bold">
+                                Mensal
+                            </th>
+                            <th scope="col" class="py-5 px-6 w-1/4 text-center text-lg font-bold bg-[#142340] text-white border-x border-slate-700/50">
+                                Livre-Trânsito
+                            </th>
+                            <th scope="col" class="py-5 px-6 w-1/4 text-center text-lg font-bold">
+                                Estudante
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80 text-slate-200">
+                        
+                        <!-- Linha 1: Preço -->
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <th scope="row" class="py-6 px-6 font-medium text-slate-300 text-sm">
+                                Preço
+                            </th>
+                            <td class="py-6 px-6 text-center">
+                                <span class="text-3xl font-extrabold text-[#00a8e8]">35€</span>
+                                <span class="text-xs text-slate-400 font-normal ml-0.5">/mês</span>
+                            </td>
+                            <td class="py-6 px-6 text-center bg-[#142340]/90 border-x border-slate-700/50">
+                                <span class="text-3xl font-extrabold text-[#00a8e8]">49€</span>
+                                <span class="text-xs text-slate-400 font-normal ml-0.5">/mês</span>
+                            </td>
+                            <td class="py-6 px-6 text-center">
+                                <span class="text-3xl font-extrabold text-[#00a8e8]">25€</span>
+                                <span class="text-xs text-slate-400 font-normal ml-0.5">/mês</span>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 2: Sala de musculação -->
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <th scope="row" class="py-5 px-6 font-medium text-slate-300 text-sm">
+                                Sala de musculação
+                            </th>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-[#00a8e8] text-xl font-bold" title="Incluído">✓</span>
+                            </td>
+                            <td class="py-5 px-6 text-center bg-[#142340]/90 border-x border-slate-700/50">
+                                <span class="text-[#00a8e8] text-xl font-bold" title="Incluído">✓</span>
+                            </td>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-[#00a8e8] text-xl font-bold" title="Incluído">✓</span>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 3: Aulas de grupo -->
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <th scope="row" class="py-5 px-6 font-medium text-slate-300 text-sm">
+                                Aulas de grupo
+                            </th>
+                            <td class="py-5 px-6 text-center text-sm text-slate-300">
+                                2 por semana
+                            </td>
+                            <td class="py-5 px-6 text-center bg-[#142340]/90 border-x border-slate-700/50 font-bold text-[#00a8e8] text-sm">
+                                Ilimitadas
+                            </td>
+                            <td class="py-5 px-6 text-center text-sm text-slate-300">
+                                2 por semana
+                            </td>
+                        </tr>
+
+                        <!-- Linha 4: Acesso 24/7 -->
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <th scope="row" class="py-5 px-6 font-medium text-slate-300 text-sm">
+                                Acesso 24/7
+                            </th>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-slate-400 text-lg font-bold" title="Não incluído">✗</span>
+                            </td>
+                            <td class="py-5 px-6 text-center bg-[#142340]/90 border-x border-slate-700/50">
+                                <span class="text-[#00a8e8] text-xl font-bold" title="Incluído">✓</span>
+                            </td>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-slate-400 text-lg font-bold" title="Não incluído">✗</span>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 5: Plano de treino personalizado -->
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <th scope="row" class="py-5 px-6 font-medium text-slate-300 text-sm">
+                                Plano de treino personalizado
+                            </th>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-slate-400 text-lg font-bold" title="Não incluído">✗</span>
+                            </td>
+                            <td class="py-5 px-6 text-center bg-[#142340]/90 border-x border-slate-700/50">
+                                <span class="text-[#00a8e8] text-xl font-bold" title="Incluído">✓</span>
+                            </td>
+                            <td class="py-5 px-6 text-center">
+                                <span class="text-slate-400 text-lg font-bold" title="Não incluído">✗</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Nota informativa sobre o Plano Estudante -->
+        <p class="text-slate-400 text-xs sm:text-sm mt-4">
+            Plano Estudante mediante comprovativo de matrícula.
+        </p>
+
+    </main>
+
+    <!-- ===== RODAPÉ INSTITUCIONAL ===== -->
+    <footer class="bg-[#080d19] border-t border-slate-800/80 pt-12 pb-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                
+                <!-- Coluna 1: Navegação -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Navegação
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="modalidades.html" class="hover:text-white transition-colors">Modalidades</a></li>
+                        <li><a href="planos.html" class="hover:text-white transition-colors">Planos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Contactos -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Contactos
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>
+                            <a href="mailto:geral@pulsefit.studio" class="hover:text-white transition-colors">
+                                geral@pulsefit.studio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+351210000000" class="hover:text-white transition-colors">
+                                +351 210 000 000
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Horário -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Horário
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>Segunda a sexta: 06h - 23h</li>
+                        <li>Sábado e domingo: 08h - 20h</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barra de Copyright -->
+            <div class="border-t border-slate-800/60 pt-6 text-center text-slate-500 text-xs sm:text-sm">
+                &copy; 2026 PulseFit Studio. Todos os direitos reservados.
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts do Projeto -->
+    <script src="js/menu.js"></script>
+</body>
+</html>

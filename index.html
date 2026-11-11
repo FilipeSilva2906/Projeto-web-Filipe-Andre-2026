@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PulseFit Studio - Treina melhor, vive mais forte. Aulas de grupo, planos de treino flexíveis e equipamento moderno num só estúdio.">
+    <title>PulseFit Studio | Início</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            fundo: '#0b1120',
+                            fundoAlt: '#080d19',
+                            superficie: '#162238',
+                            superficieAlt: '#131d31',
+                            destaque: '#00a8e8',
+                            destaqueHover: '#0094ce'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Folha de estilos própria do projeto -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-[#0b1120] text-slate-100 min-h-screen flex flex-col font-sans antialiased">
+
+    <!-- ===== CABEÇALHO E NAVEGAÇÃO ===== -->
+    <header class="bg-[#0b1120] border-b border-slate-800/80 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            
+            <!-- Logótipo da Marca -->
+            <a href="index.html" class="flex items-center gap-3 group" aria-label="PulseFit Studio - Página Inicial">
+                <div class="bg-white rounded-xl px-3 py-1.5 shadow-md flex items-center justify-center transition-transform group-hover:scale-105">
+                    <img src="imagens/logo.png" alt="Logótipo PulseFit Studio" class="h-8 sm:h-9 object-contain">
+                </div>
+            </a>
+
+            <!-- Botão do Menu Responsivo (Mobile) -->
+            <button 
+                id="menu-botao" 
+                type="button"
+                aria-expanded="false" 
+                aria-controls="menu-principal"
+                class="md:hidden rounded-lg border border-slate-700 bg-slate-900 px-3 py-1.5 text-sm font-medium text-slate-200 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00a8e8] transition-colors"
+            >
+                <span id="menu-icone" aria-hidden="true" class="mr-1">☰</span> Menu
+            </button>
+
+            <!-- Navegação Principal -->
+            <nav id="menu-principal" aria-label="Navegação principal" class="hidden md:block w-full md:w-auto mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row md:items-center gap-6 text-sm font-medium border-t border-slate-800 pt-4 md:border-0 md:pt-0">
+                    <li>
+                        <a href="index.html" class="nav-link-ativo block py-1">Início</a>
+                    </li>
+                    <li>
+                        <a href="modalidades.html" class="text-slate-300 hover:text-[#00a8e8] transition-colors block py-1">Modalidades</a>
+                    </li>
+                    <li>
+                        <a href="planos.html" class="text-slate-300 hover:text-[#00a8e8] transition-colors block py-1">Planos</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="flex-1">
+
+        <!-- ===== SECÇÃO DE DESTAQUE (HERO) ===== -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                
+                <!-- Coluna de Texto e Ações -->
+                <div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black italic tracking-tight text-white uppercase mb-4 leading-none">
+                        Transforma o teu corpo
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-lg leading-relaxed">
+                        Treina melhor. Vive mais forte. Aulas de grupo, acompanhamento e equipamento moderno num só estúdio.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="planos.html" class="btn-ciano">
+                            Ver planos
+                        </a>
+                        <a href="modalidades.html" class="btn-contorno">
+                            Ver modalidades
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna de Imagem do Estúdio -->
+                <div class="bg-[#162238] border border-slate-700/60 rounded-2xl overflow-hidden shadow-2xl relative aspect-[4/3] md:aspect-auto md:h-80 flex items-center justify-center group">
+                    <img 
+                        src="imagens/estudio.jpg" 
+                        alt="Fotografia do estúdio moderno PulseFit" 
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-slate-950/20 pointer-events-none"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SECÇÃO: PORQUÊ O PULSEFIT? ===== -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+            
+            <div class="mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                    Porquê o PulseFit?
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-1">
+                    Três razões para começares esta semana.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Cartão 1 -->
+                <article class="cartao-estudio p-7 flex flex-col">
+                    <div class="text-[#00a8e8] text-2xl mb-4 font-bold select-none" aria-hidden="true">
+                        ◆
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Equipamento moderno
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Máquinas e pesos livres para todos os níveis, sempre em boas condições.
+                    </p>
+                </article>
+
+                <!-- Cartão 2 -->
+                <article class="cartao-estudio p-7 flex flex-col">
+                    <div class="text-amber-400 text-2xl mb-4 select-none" aria-hidden="true">
+                        ⚡
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Acesso 24/7
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Treina de madrugada ou à meia-noite. O estúdio adapta-se ao teu horário.
+                    </p>
+                </article>
+
+                <!-- Cartão 3 -->
+                <article class="cartao-estudio p-7 flex flex-col">
+                    <div class="text-[#00a8e8] text-3xl font-bold leading-none mb-3 select-none" aria-hidden="true">
+                        +
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Treino acompanhado
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Instrutores que ajustam o plano ao teu objetivo e ao teu ritmo.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== SECÇÃO: AS NOSSAS MODALIDADES ===== -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+            
+            <div class="mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                    As nossas modalidades
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-1">
+                    Escolhe a que mais combina contigo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Modalidade 1: Musculação -->
+                <article class="cartao-estudio p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden bg-[#0f172a] h-40 mb-4 border border-slate-800">
+                        <img 
+                            src="imagens/musculacao.jpg" 
+                            alt="Modalidade Musculação" 
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        >
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Musculação
+                    </h3>
+                    <p class="text-slate-300 text-sm flex-1 leading-relaxed">
+                        Força e resistência para todos os níveis.
+                    </p>
+                    <a href="modalidades.html" class="btn-ciano mt-6 text-center text-sm">
+                        Saber mais
+                    </a>
+                </article>
+
+                <!-- Modalidade 2: CrossFit -->
+                <article class="cartao-estudio p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden bg-[#0f172a] h-40 mb-4 border border-slate-800">
+                        <img 
+                            src="imagens/crossfit.jpg" 
+                            alt="Modalidade CrossFit" 
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        >
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        CrossFit
+                    </h3>
+                    <p class="text-slate-300 text-sm flex-1 leading-relaxed">
+                        Treino intenso e dinâmico em grupo.
+                    </p>
+                    <a href="modalidades.html" class="btn-ciano mt-6 text-center text-sm">
+                        Saber mais
+                    </a>
+                </article>
+
+                <!-- Modalidade 3: Pilates -->
+                <article class="cartao-estudio p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden bg-[#0f172a] h-40 mb-4 border border-slate-800">
+                        <img 
+                            src="imagens/pilates.jpg" 
+                            alt="Modalidade Pilates" 
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        >
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Pilates
+                    </h3>
+                    <p class="text-slate-300 text-sm flex-1 leading-relaxed">
+                        Mobilidade, equilíbrio e controlo corporal.
+                    </p>
+                    <a href="modalidades.html" class="btn-ciano mt-6 text-center text-sm">
+                        Saber mais
+                    </a>
+                </article>
+
+                <!-- Modalidade 4: Spinning -->
+                <article class="cartao-estudio p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden bg-[#0f172a] h-40 mb-4 border border-slate-800">
+                        <img 
+                            src="imagens/spinning.jpg" 
+                            alt="Modalidade Spinning" 
+                            class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        >
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        Spinning
+                    </h3>
+                    <p class="text-slate-300 text-sm flex-1 leading-relaxed">
+                        Cardio ao ritmo da música, em aulas de grupo.
+                    </p>
+                    <a href="modalidades.html" class="btn-ciano mt-6 text-center text-sm">
+                        Saber mais
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== SECÇÃO: BANNER CTA (COMEÇA HOJE) ===== -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 my-12">
+            <div class="border border-[#00a8e8]/30 bg-[#131d31] rounded-2xl p-10 md:p-14 text-center shadow-xl relative overflow-hidden">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
+                    Começa hoje
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg mb-6">
+                    Escolhe o plano que se adapta a ti!
+                </p>
+                <a href="planos.html" class="btn-ciano px-8 py-3 text-base">
+                    Ver planos
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ INSTITUCIONAL ===== -->
+    <footer class="bg-[#080d19] border-t border-slate-800/80 pt-12 pb-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                
+                <!-- Coluna 1: Navegação -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Navegação
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="modalidades.html" class="hover:text-white transition-colors">Modalidades</a></li>
+                        <li><a href="planos.html" class="hover:text-white transition-colors">Planos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Contactos -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Contactos
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>
+                            <a href="mailto:geral@pulsefit.studio" class="hover:text-white transition-colors">
+                                geral@pulsefit.studio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+351210000000" class="hover:text-white transition-colors">
+                                +351 210 000 000
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Horário -->
+                <div>
+                    <h3 class="text-[#00a8e8] font-bold text-base mb-4 tracking-wide">
+                        Horário
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>Segunda a sexta: 06h - 23h</li>
+                        <li>Sábado e domingo: 08h - 20h</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barra de Copyright -->
+            <div class="border-t border-slate-800/60 pt-6 text-center text-slate-500 text-xs sm:text-sm">
+                &copy; 2026 PulseFit Studio. Todos os direitos reservados.
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Script de Interatividade do Menu -->
+    <script src="js/menu.js"></script>
+</body>
+</html>
